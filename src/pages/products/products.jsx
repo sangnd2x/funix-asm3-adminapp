@@ -20,7 +20,7 @@ const Products = () => {
 
   useEffect(() => {
     const fetchProducts = async () => {
-      const response = await axios.get('http://localhost:5000/admin/products', {headers})
+      const response = await axios.get('https://funix-asm3-server-production.up.railway.app/admin/products', {headers})
       // console.log(response.data)
       setProducts(response.data)
     }
@@ -41,7 +41,7 @@ const Products = () => {
     }
 
     const postSearch = async () => {
-      const response = await axios.post('http://localhost:5000/admin/search', data, {headers});
+      const response = await axios.post('https://funix-asm3-server-production.up.railway.app/admin/search', data, {headers});
       console.log(response.data);
       setSearchProducts(response.data);
       setSearched(!searched)
