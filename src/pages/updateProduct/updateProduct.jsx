@@ -33,7 +33,7 @@ const UpdateProduct = () => {
   // Featch product details
   useEffect(() => {
     const fetchProduct = async () => {
-      const response = await axios.get(`http://localhost:5000/admin/edit-product/${prodId}`, {headers});
+      const response = await axios.get(`https://funix-asm3-server-production.up.railway.app/admin/edit-product/${prodId}`, {headers});
       console.log(response);
       setProduct(response.data);
     }
@@ -53,7 +53,7 @@ const UpdateProduct = () => {
     data.append('quantity', quantity);
 
     const postEditProduct = async () => {
-      const response = await axios.post(`http://localhost:5000/admin/edit-product/${prodId}`, data, {headers});
+      const response = await axios.post(`https://funix-asm3-server-production.up.railway.app/admin/edit-product/${prodId}`, data, {headers});
       console.log(response);
       if (response.status === 200) {
         alert(response.data.msg);

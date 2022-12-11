@@ -24,7 +24,7 @@ const Signup = () => {
     };
 
     const postSignUp = async () => {
-      const response = await axios.post('http://localhost:5000/admin/signup', data);
+      const response = await axios.post('https://funix-asm3-server-production.up.railway.app/admin/signup', data);
       if (response.status === 200) {
         navigate('/signin');
       }

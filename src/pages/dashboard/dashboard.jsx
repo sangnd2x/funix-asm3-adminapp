@@ -17,7 +17,7 @@ const DashBoard = () => {
   // Fetch number of clients
   useEffect(() => {
     const fetchClients = async () => {
-      const response = await axios.get('http://localhost:5000/admin/clients', {headers});
+      const response = await axios.get('https://funix-asm3-server-production.up.railway.app/admin/clients', {headers});
       setClients(response.data);
     };
 
@@ -27,7 +27,7 @@ const DashBoard = () => {
   // Fetch number of orders and revenue
   useEffect(() => {
     const fetchOrders = async () => {
-      const response = await axios.get('http://localhost:5000/admin/orders', { headers });
+      const response = await axios.get('https://funix-asm3-server-production.up.railway.app/admin/orders', { headers });
       setRevenue(response.data.earning);
       setOrders(response.data.orders);
     };

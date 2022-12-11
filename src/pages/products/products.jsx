@@ -61,7 +61,7 @@ const Products = () => {
 
   const handleDelete = (id) => {
     const postDeleteProduct = async () => {
-      const response = await axios.delete(`http://localhost:5000/admin/delete-product/${id}`, {headers});
+      const response = await axios.delete(`https://funix-asm3-server-production.up.railway.app/admin/delete-product/${id}`, {headers});
       console.log(response);
       setLoad(!load);
     }

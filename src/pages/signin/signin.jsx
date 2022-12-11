@@ -17,7 +17,7 @@ const Signin = () => {
     }
 
     const postSignIn = async () => {
-      const response = await axios.post('http://localhost:5000/admin/signin', data);
+      const response = await axios.post('https://funix-asm3-server-production.up.railway.app/admin/signin', data);
       console.log(response.data.user);
 
       if (response.data.user.role === 'admin') {

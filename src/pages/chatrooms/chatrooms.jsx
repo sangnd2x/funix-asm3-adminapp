@@ -16,7 +16,7 @@ const ChatRooms = () => {
       'authorization': 'Bearer ' + localStorage.getItem('token')
     }
     const fetchChatRooms = async () => {
-      const response = await axios.get('http://localhost:5000/admin/chatrooms');
+      const response = await axios.get('https://funix-asm3-server-production.up.railway.app/admin/chatrooms');
       // console.log(response.data);
       setChatrooms(response.data);
     }
@@ -28,7 +28,7 @@ const ChatRooms = () => {
   // fetch message
   useEffect(() => {
     const fetchMessage = async () => {
-      const response = await axios.get(`http://localhost:5000/admin/chatrooms/getById?roomId=${roomId}`);
+      const response = await axios.get(`https://funix-asm3-server-production.up.railway.app/admin/chatrooms/getById?roomId=${roomId}`);
       setMessages(response.data.messages);
     }
 

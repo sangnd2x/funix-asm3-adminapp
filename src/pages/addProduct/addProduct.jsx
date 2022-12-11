@@ -41,11 +41,11 @@ const AddProduct = () => {
 
       const postProduct = async () => {
         try {
-          const response = await axios.post('http://localhost:5000/admin/new-product', data, {headers});
+          const response = await axios.post('https://funix-asm3-server-production.up.railway.app/admin/new-product', data, {headers});
           if (response.status === 200) {
             // console.log(response.data.msg);
             alert(response.data.msg);
-            navigate('/products');
+            // navigate('/products');
           }
         } catch (err) {
           console.log(err.response.data);
