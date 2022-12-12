@@ -45,7 +45,7 @@ const AddProduct = () => {
           if (response.status === 200) {
             // console.log(response.data.msg);
             alert(response.data.msg);
-            // navigate('/products');
+            navigate('/products');
           }
         } catch (err) {
           console.log(err.response.data);
